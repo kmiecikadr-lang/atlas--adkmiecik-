@@ -309,6 +309,26 @@
     font-size:15px; font-weight:700; line-height:1.2;
   }
   .day-detail { font-size:11px; color:var(--muted); margin-top:4px; line-height:1.4; }
+
+  .yt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 7px 14px;
+    background: rgba(255, 0, 0, 0.12);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 4px;
+    color: #FF4444;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .yt-btn:hover { background: rgba(255,0,0,0.22); }
 </style>
 </head>
 <body>
@@ -922,6 +942,7 @@
       <ul class="tips-list" id="modal-errors"></ul>
       <div id="modal-note" class="warn-box yellow" style="margin-top:16px; display:none;"></div>
       <div id="modal-yt" style="margin-top:12px; display:none;"></div>
+      <div id="modal-yt" style="margin-top:12px; display:none;"></div>
     </div>
   </div>
 </div>
@@ -930,6 +951,7 @@
 // ─── DANE ĆWICZEŃ ───────────────────────────────────────────
 const EXERCISES = {
   squat: {
+    yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     title:"Przysiad ze Sztangą",sets:"4 × 6-8 · Przerwa 2-3 min",tags:[["A","tag-a"],["Czworogłowe","tag-muscle"],["Pośladki","tag-muscle"]],
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Squats_2.jpg/640px-Squats_2.jpg",
@@ -944,6 +966,7 @@ const EXERCISES = {
   },
   rdl: {
     yt: 'hCDZSxwrZL0', ytChannel: 'Alan Thrall',
+    yt: 'hCDZSxwrZL0', ytChannel: 'Alan Thrall',
     title:"Martwy Ciąg Rumuński (RDL)",sets:"3 × 8-10 · Przerwa 90s",tags:[["A","tag-a"],["Dwugłowe","tag-muscle"],["Pośladki","tag-muscle"]],
     steps:["Stań z sztangą w rękach na szerokość bioder. Chwyt nadwrącz (pronacja).",
            "Lekko ugnij kolana i ZABLOKUJ je w tym kącie — nie będą się ruszać przez cały ruch.",
@@ -954,6 +977,7 @@ const EXERCISES = {
     errors:["🚫 Zginasz kolana jak w klasycznym deadlifcie — to jest RDL, nie squat.","🚫 Zaokrąglasz kręgosłup na dole — to sygnał że schodzisz za nisko lub ciężar za duży.","🚫 Sztanga oddala się od nóg — powinna prawie ocierać się o uda."]
   },
   lunge: {
+    yt: 'QOVaHwm-Q6U', ytChannel: 'Jeff Nippard',
     yt: 'QOVaHwm-Q6U', ytChannel: 'Jeff Nippard',
     title:"Wykroki Chodzące z Hantlami",sets:"3 × 10/nogę · Przerwa 90s",tags:[["A","tag-a"],["Czworogłowe","tag-muscle"],["Stabilizacja","tag-muscle"]],
     steps:["Stań prosto z hantlami w rękach, wzrok przed siebie.",
@@ -967,6 +991,7 @@ const EXERCISES = {
   },
   calves: {
     yt: 'gwLzBJYoWlQ', ytChannel: 'Jeff Nippard',
+    yt: 'gwLzBJYoWlQ', ytChannel: 'Jeff Nippard',
     title:"Wspięcia na Palce",sets:"4 × 15-20 · Przerwa 60s",tags:[["A","tag-a"],["Łydki","tag-muscle"]],
     steps:["Stań na krawędzi podwyższenia (stopień, blok) — piętami poza krawędzią.",
            "Pełne rozciągnięcie w dole — pięty poniżej poziomu palców.",
@@ -977,6 +1002,7 @@ const EXERCISES = {
     note:"Łydki to amortyzator biegu. Zaniedbane = zwiększone ryzyko zapalenia ścięgna Achillesa."
   },
   bench: {
+    yt: '4Y2ZdHCOXok', ytChannel: 'Alan Thrall',
     yt: '4Y2ZdHCOXok', ytChannel: 'Alan Thrall',
     title:"Wyciskanie Sztangi — Ławka Płaska",sets:"4 × 6-8 · Przerwa 2 min",tags:[["A","tag-a"],["Klatka","tag-muscle"],["Triceps","tag-muscle"]],
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bench_press_2.jpg/640px-Bench_press_2.jpg",
@@ -990,6 +1016,7 @@ const EXERCISES = {
   },
   flies: {
     yt: 'eozdVDA78K0', ytChannel: 'Jeff Nippard',
+    yt: 'eozdVDA78K0', ytChannel: 'Jeff Nippard',
     title:"Rozpiętki z Hantlami",sets:"3 × 10-12 · Przerwa 90s",tags:[["A","tag-a"],["Klatka","tag-muscle"]],
     steps:["Połóż się na ławce z hantlami nad klatką — chwyt neutralny (kciuki do góry).",
            "Lekko ugnij łokcie i ZABLOKUJ je w tym kącie na cały ruch.",
@@ -1001,6 +1028,7 @@ const EXERCISES = {
   },
   dips: {
     yt: '2z8JmcrW-As', ytChannel: 'Jeff Nippard',
+    yt: '2z8JmcrW-As', ytChannel: 'Jeff Nippard',
     title:"Dipy / Triceps Pushdown",sets:"3 × 8-12 · Przerwa 90s",tags:[["A","tag-a"],["Triceps","tag-muscle"]],
     steps:["DIPY: Chwyć poręcze — ramiona proste, ciało lekko pochylone do przodu.",
            "Opuszczaj powoli — łokcie idą do tyłu, nie na boki.",
@@ -1011,6 +1039,7 @@ const EXERCISES = {
     errors:["🚫 Dipy: łokcie lecą na boki = stres na barki.","🚫 Pushdown: tułów się pochyla przy robieniu ciężaru — zmniejsz obciążenie."]
   },
   plank: {
+    yt: 'ASdvN_XEl_c', ytChannel: 'Jeff Nippard',
     yt: 'ASdvN_XEl_c', ytChannel: 'Jeff Nippard',
     title:"Plank + Warianty Boczne",sets:"3 × 45-60s · Przerwa 45s",tags:[["A","tag-a"],["Core","tag-muscle"],["Stabilizacja","tag-muscle"]],
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Plank_position.jpg/640px-Plank_position.jpg",
@@ -1025,6 +1054,7 @@ const EXERCISES = {
   },
   legrise: {
     yt: 'hdng3lyIe2Y', ytChannel: 'Calisthenicmovement',
+    yt: 'hdng3lyIe2Y', ytChannel: 'Calisthenicmovement',
     title:"Unoszenie Nóg w Zwisie",sets:"3 × 10-15 · Przerwa 60s",tags:[["A","tag-a"],["Dolny brzuch","tag-muscle"]],
     steps:["Zawisaj na drążku — pełen chwyt, ramiona stabilne.",
            "Napnij brzuch i unos nogi do kąta 90° (lub wyżej).",
@@ -1035,6 +1065,7 @@ const EXERCISES = {
     errors:["🚫 Swobodne spadanie nóg w dół = żaden efekt. Kontroluj opuszczanie.","🚫 Kiwanie ciałem = inercja zamiast siły mięśniowej."]
   },
   pallof: {
+    yt: 'AH_QZLm_0-s', ytChannel: 'Jeff Nippard',
     yt: 'AH_QZLm_0-s', ytChannel: 'Jeff Nippard',
     title:"Pallof Press",sets:"3 × 10/stronę · Przerwa 60s",tags:[["A","tag-a"],["Anty-rotacja","tag-muscle"],["Core","tag-muscle"]],
     steps:["Stań bokiem do wyciągu kablowego — wyciąg na wysokości klatki.",
@@ -1048,6 +1079,7 @@ const EXERCISES = {
     note:"Pallof press naśladuje stabilizację tułowia podczas biegu — każdy krok to jednostronne obciążenie."
   },
   deadlift: {
+    yt: 'op9kVnSso6Q', ytChannel: 'Alan Thrall',
     yt: 'op9kVnSso6Q', ytChannel: 'Alan Thrall',
     title:"Martwy Ciąg Klasyczny 👑",sets:"4 × 4-6 · Przerwa 3 min",tags:[["B","tag-b"],["Plecy","tag-muscle"],["Nogi","tag-muscle"],["Pośladki","tag-muscle"]],
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Conventional_Deadlift.jpg/640px-Conventional_Deadlift.jpg",
@@ -1063,6 +1095,7 @@ const EXERCISES = {
   },
   latpulldown: {
     yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
+    yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     title:"Lat Pulldown — Wyciąg",sets:"4 × 6-12 · Przerwa 2 min",tags:[["B","tag-b"],["Najszersze","tag-muscle"],["Biceps","tag-muscle"]],
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lat_pull_down.jpg/640px-Lat_pull_down.jpg",
     steps:["Usiądź przy wyciągu, uda pod poduszkami. Chwyt szerokim nachwytem.",
@@ -1076,6 +1109,7 @@ const EXERCISES = {
   },
   row: {
     yt: 'G8l_8chR5BE', ytChannel: 'Jeff Nippard',
+    yt: 'G8l_8chR5BE', ytChannel: 'Jeff Nippard',
     title:"Wiosłowanie Sztangą",sets:"3 × 8-10 · Przerwa 2 min",tags:[["B","tag-b"],["Plecy","tag-muscle"]],
     steps:["Stań z sztangą, pochyl się do kąta 45° — biodra cofnięte, plecy proste.",
            "Chwyt na szerokość barków lub nieco szerzej.",
@@ -1086,6 +1120,7 @@ const EXERCISES = {
     errors:["🚫 Tułów się prostuje przy ciągnięciu — to kołysanie, nie wiosłowanie.","🚫 Łokcie lecą na boki — ciągnij łokciami do bioder, nie do barków."]
   },
   facepull: {
+    yt: 'rep-qVOkqgk', ytChannel: 'Jeff Nippard',
     yt: 'rep-qVOkqgk', ytChannel: 'Jeff Nippard',
     title:"Face Pull z Linką",sets:"3 × 12-15 · Przerwa 60s",tags:[["B","tag-b"],["Tylne barki","tag-muscle"],["Rotatory","tag-muscle"]],
     steps:["Ustaw wyciąg na wysokości twarzy lub wyżej. Użyj uchwytu sznurowego.",
@@ -1099,6 +1134,7 @@ const EXERCISES = {
   },
   bulgarian: {
     yt: '2C-uNgKwPLE', ytChannel: 'Jeff Nippard',
+    yt: '2C-uNgKwPLE', ytChannel: 'Jeff Nippard',
     title:"Bułgarski Przysiad z Hantlami",sets:"3 × 8-10/nogę · Przerwa 90s",tags:[["B","tag-b"],["Czworogłowe","tag-muscle"],["Pośladki","tag-muscle"]],
     steps:["Stań plecami do ławki. Tylną stopę połóż na ławce — wierzchem lub palcami.",
            "Przednia stopa daleko przed tą z tyłu — przy testowaniu zacznij od szerszej.",
@@ -1111,6 +1147,7 @@ const EXERCISES = {
   },
   legcurl: {
     yt: 'Orxowest56U', ytChannel: 'Jeff Nippard',
+    yt: 'Orxowest56U', ytChannel: 'Jeff Nippard',
     title:"Leg Curl — Uginanie Nóg",sets:"3 × 10-12 · Przerwa 90s",tags:[["B","tag-b"],["Dwugłowe uda","tag-muscle"]],
     steps:["Połóż się na maszynie twarzą w dół. Kostki pod wałkiem.",
            "Biodra i uda przyciśnięte do poduszki przez cały ruch.",
@@ -1121,6 +1158,7 @@ const EXERCISES = {
     note:"Wzmocnione dwugłowe uda = główna prewencja urazu ścięgna Achillesa i naciągnięcia podkolanowego u biegaczy."
   },
   curl: {
+    yt: 'ykJmrZ5v0Oo', ytChannel: 'Jeff Nippard',
     yt: 'ykJmrZ5v0Oo', ytChannel: 'Jeff Nippard',
     title:"Uginanie Ramion ze Sztangą",sets:"3 × 8-10 · Przerwa 90s",tags:[["B","tag-b"],["Biceps","tag-muscle"]],
     steps:["Stań prosto ze sztangą w rękach — chwyt podchwytem (supinacja).",
@@ -1133,6 +1171,7 @@ const EXERCISES = {
   },
   hammer: {
     yt: 'TwD-YGVP4Bk', ytChannel: 'Jeff Nippard',
+    yt: 'TwD-YGVP4Bk', ytChannel: 'Jeff Nippard',
     title:"Hammer Curl z Hantlami",sets:"3 × 10-12 · Przerwa 60s",tags:[["B","tag-b"],["Biceps","tag-muscle"]],
     steps:["Stań z hantlami — kciuki skierowane w górę (chwyt neutralny).",
            "Tak samo jak zwykły curl — łokcie przy ciele.",
@@ -1142,6 +1181,7 @@ const EXERCISES = {
     errors:["🚫 Obracasz nadgarstek w górze — to nie jest hammer curl wtedy.","🚫 Te same błędy co w zwykłym curlu — łokcie i kołysanie."]
   },
   hollow: {
+    yt: 'LlDNef_Zt9Y', ytChannel: 'FitnessFAQs',
     yt: 'LlDNef_Zt9Y', ytChannel: 'FitnessFAQs',
     title:"Hollow Body Hold",sets:"3 × 30-45s · Przerwa 45s",tags:[["B","tag-b"],["Core","tag-muscle"]],
     steps:["Połóż się na plecach. Ramiona wzdłuż ciała lub wyprostowane za głową.",
@@ -1155,6 +1195,7 @@ const EXERCISES = {
   },
   russian: {
     yt: 'wkD8rjkodUI', ytChannel: 'Jeff Nippard',
+    yt: 'wkD8rjkodUI', ytChannel: 'Jeff Nippard',
     title:"Russian Twist z Obciążeniem",sets:"3 × 20 (10/stronę) · Przerwa 45s",tags:[["B","tag-b"],["Skośne","tag-muscle"],["Rotacja","tag-muscle"]],
     steps:["Usiądź z nogami ugiętymi, delikatnie odchyl się do tyłu — kąt ~45°.",
            "Trzymaj obciążenie (talerz, kettlebell) przed klatką.",
@@ -1164,6 +1205,7 @@ const EXERCISES = {
     errors:["🚫 Tylko ręce się kręcą, tułów stoi — to nie jest rotacja mięśni skośnych.","🚫 Zbyt szybko — każde powtórzenie powinno być kontrolowane."]
   },
   latpulldown_prog: {
+    yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     title:"Lat Pulldown — Progresja",sets:"Tydz 1-2: 4×10-12 | Tydz 3-4: 4×6-8 | Tydz 5-6: 5×5",tags:[["Progresja","tag-pull"],["Najszersze","tag-muscle"]],
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lat_pull_down.jpg/640px-Lat_pull_down.jpg",
@@ -1178,6 +1220,7 @@ const EXERCISES = {
   },
   negatives: {
     yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
+    yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     title:"Negatives — Zwolnione Opuszczanie",sets:"Tydz 1-2: 3×3-5 sek | Tydz 3-4: 3×4-5 sek",tags:[["Progresja","tag-pull"],["Ekscentryczne","tag-muscle"]],
     steps:["Podejdź pod drążek. Wejdź na podwyższenie (krzesło, ławka) lub wskocz.",
            "Zacznij w pozycji górnej — broda nad drążkiem, łokcie zgięte.",
@@ -1189,6 +1232,7 @@ const EXERCISES = {
     note:"Faza ekscentryczna jest 20-40% silniejsza od koncentrycznej. Negatives to najszybszy sposób na siłę do podciągania."
   },
   pullup_full: {
+    yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     title:"Podciąganie — Docelowa Technika",sets:"Od tygodnia 5: 3-4 × MAX · Przerwa 2 min",tags:[["Cel","tag-pull"],["Najszersze","tag-muscle"],["Biceps","tag-muscle"]],
     steps:["Stań pod drążkiem. Chwyć nieco szerzej niż barki — chwyt nachwytem (pronacja).",
@@ -1203,6 +1247,7 @@ const EXERCISES = {
   },
   pigeon: {
     yt: '1GFHDd-OWC4', ytChannel: 'Tom Merrick',
+    yt: '1GFHDd-OWC4', ytChannel: 'Tom Merrick',
     title:"Figura 4 / Piriformis Stretch",sets:"60s × obie strony",tags:[["C","tag-c"],["Pośladki","tag-muscle"],["Piriformis","tag-muscle"]],
     steps:["Połóż się na plecach. Ugnij obie kolana.",
            "Załóż prawą kostkę na lewe kolano — otwierając prawe biodro.",
@@ -1214,6 +1259,7 @@ const EXERCISES = {
     note:"Piriformis to głęboki mięsień pośladkowy. Napięty = ból w okolicy siodła i dolnego odcinka. Biegacze go bardzo często napinają."
   },
   lowlunge: {
+    yt: 'UGEpQ1vEq-Y', ytChannel: 'Tom Merrick',
     yt: 'UGEpQ1vEq-Y', ytChannel: 'Tom Merrick',
     title:"Low Lunge + Twist",sets:"45s × obie strony",tags:[["C","tag-c"],["Biodrowo-lędźwiowy","tag-muscle"]],
     steps:["Klęknij w wypadzie — prawa noga z przodu, lewa z tyłu na kolanie.",
@@ -1227,6 +1273,7 @@ const EXERCISES = {
   },
   hamstring: {
     yt: 'mMQVFRrEDkQ', ytChannel: 'Tom Merrick',
+    yt: 'mMQVFRrEDkQ', ytChannel: 'Tom Merrick',
     title:"Hamstring Stretch — Leżąc",sets:"60s × obie strony",tags:[["C","tag-c"],["Dwugłowe uda","tag-muscle"]],
     steps:["Połóż się na plecach. Weź pasek, ręcznik lub gumę.",
            "Zaczep go za stopę jednej nogi i unoś ją ku górze.",
@@ -1237,6 +1284,7 @@ const EXERCISES = {
     errors:["🚫 Unosisz drugą nogę z podłogi — przyciśnij ją.","🚫 Sprężynowanie zamiast statycznego hold — tu nie chodzi o ruch."]
   },
   calvesc: {
+    yt: '7F8swlMdkqY', ytChannel: 'Tom Merrick',
     yt: '7F8swlMdkqY', ytChannel: 'Tom Merrick',
     title:"Rozciąganie Łydek",sets:"45s × 2 wersje × obie strony",tags:[["C","tag-c"],["Łydki","tag-muscle"],["Achilles","tag-muscle"]],
     steps:["Stań przy ścianie. Oprzyj się rękami.",
@@ -1250,6 +1298,7 @@ const EXERCISES = {
   },
   childpose: {
     yt: 'qUtFVrMHqiA', ytChannel: 'Tom Merrick',
+    yt: 'qUtFVrMHqiA', ytChannel: 'Tom Merrick',
     title:"Child's Pose",sets:"90 sekund",tags:[["C","tag-c"],["Kręgosłup","tag-muscle"],["Barki","tag-muscle"]],
     steps:["Klęknij na macie. Usiądź na piętach.",
            "Pochyl się do przodu rozciągając ręce przed siebie.",
@@ -1259,6 +1308,7 @@ const EXERCISES = {
     errors:["🚫 Napinasz się zamiast odpuszczać — to pozycja odpoczynku.","🚫 Zbyt krótko — mniej niż 45 sekund nie przynosi efektu."]
   },
   twist: {
+    yt: 'e77d4Mr2Fso', ytChannel: 'Tom Merrick',
     yt: 'e77d4Mr2Fso', ytChannel: 'Tom Merrick',
     title:"Skrętoskłon Leżący (Supine Twist)",sets:"45s × obie strony",tags:[["C","tag-c"],["Kręgosłup","tag-muscle"],["IT band","tag-muscle"]],
     steps:["Połóż się na plecach. Ramiona rozłożone jak litera T.",
@@ -1271,6 +1321,7 @@ const EXERCISES = {
   },
   hipcircles: {
     yt: 'eLwp0WiwKgI', ytChannel: 'Tom Merrick',
+    yt: 'eLwp0WiwKgI', ytChannel: 'Tom Merrick',
     title:"Kręgi Biodrowe",sets:"60s · Obie strony",tags:[["C","tag-c"],["Biodra","tag-muscle"]],
     steps:["Stań prosto, stopy na szerokość bioder. Ręce na biodrach.",
            "Zataczaj kołami biodrami — jak hula hoop.",
@@ -1281,6 +1332,7 @@ const EXERCISES = {
   },
   catcow: {
     yt: 'kqnua4rHVVA', ytChannel: 'Tom Merrick',
+    yt: 'kqnua4rHVVA', ytChannel: 'Tom Merrick',
     title:"Cat-Cow Flow",sets:"60 sekund z oddechem",tags:[["C","tag-c"],["Kręgosłup","tag-muscle"]],
     steps:["Klęknij na czworakach — nadgarstki pod barkami, kolana pod biodrami.",
            "KROWA (wdech): opuść brzuch w dół, unieś głowę i ogon. Plecy w łuk.",
@@ -1290,6 +1342,7 @@ const EXERCISES = {
     errors:["🚫 Ruch bez oddechu — oddech to serce tego ćwiczenia.","🚫 Tylko szyja lub tylko biodra — cały kręgosłup musi się ruszać segmentowo."]
   },
   wgs: {
+    yt: 'ERgpa0jFiCU', ytChannel: 'Jeff Nippard',
     yt: 'ERgpa0jFiCU', ytChannel: 'Jeff Nippard',
     title:"World's Greatest Stretch",sets:"2 × 5 na stronę",tags:[["Rozgrzewka","tag-muscle"],["Mobilność","tag-muscle"]],
     steps:["Stań prosto. Zrób duży krok prawą nogą do przodu (lunge).",
@@ -1302,6 +1355,7 @@ const EXERCISES = {
   },
   rowarm: {
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
+    yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     title:"Rower / Bieżnia — Rozgrzewka",sets:"1 × 8 min",tags:[["Rozgrzewka","tag-muscle"],["Cardio","tag-muscle"]],
     steps:["Ustaw umiarkowane tempo — powinno być komfortowo.",
            "Cel: podnieść tętno do 110-125 bpm.",
@@ -1311,6 +1365,7 @@ const EXERCISES = {
     errors:["🚫 Za intensywnie na start — rozgrzewka ma przygotować, nie zmęczyć.","🚫 Pomijanie rozgrzewki — to najczęstsze źródło kontuzji!"]
   },
   rowing: {
+    yt: 'oBE_kKM3Uqo', ytChannel: 'Concept2',
     yt: 'oBE_kKM3Uqo', ytChannel: 'Concept2',
     title:"Ergometr / Wioślarki — Rozgrzewka",sets:"1 × 8 min",tags:[["Rozgrzewka","tag-muscle"],["Cardio","tag-muscle"]],
     steps:["Usiądź na ergometrze. Stopy wpięte w klamry.",
