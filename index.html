@@ -452,6 +452,21 @@
       </div>
     </div>
 
+    
+      <div class="ex-card a-card" onclick="openModal('boxjump')">
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Nogi</span><span class="tag tag-muscle">Eksplozywność</span></div>
+          <div class="card-title">Skok na Skrzynię (Box Jump)</div>
+          <div class="card-sets">4 × 5 · Przerwa 2 min</div>
+          <ul class="tips-list">
+            <li class="tip-item"><span class="tip-icon">⚡</span>Skocz miękkimi kolanami — nie ląduj sztywno</li>
+            <li class="tip-item"><span class="tip-icon">⚡</span>Zeskakuj zawsze na ziemię — nie skacz w tył ze skrzyni</li>
+            <li class="tip-item"><span class="tip-icon">⚡</span>Kluczowe dla mocy biegowej i szybkości kroku</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="section-label">Klatka i Triceps</div>
     <div class="exercises-grid">
       <div class="ex-card a-card" onclick="openModal('bench')">
@@ -473,7 +488,7 @@
         
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Klatka</span></div>
-          <div class="card-title">Rozpiętki z Hantlami na Ławce</div>
+          <div class="card-title">Wyciskanie Hantlami na Ławce</div>
           <div class="card-sets">3 × 10-12 · Przerwa 90s</div>
           <ul class="tips-list">
             <li class="tip-item"><span class="tip-icon">⚡</span>Łokcie lekko zgięte przez cały ruch</li>
@@ -648,6 +663,21 @@
             <li class="tip-item"><span class="tip-icon">⚡</span>Biodra przy poduszce — nie unoś ich</li>
             <li class="tip-item"><span class="tip-icon">⚡</span>Powoli prostuj — 3 sekundy w dół</li>
             <li class="tip-item"><span class="tip-icon">⚡</span>Prewencja urazów ścięgna Achillesa i podkolanowego!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="ex-card b-card" onclick="openModal('boxjump')">
+        <div class="card-body">
+          <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Nogi</span><span class="tag tag-muscle">Eksplozywność</span></div>
+          <div class="card-title">Skok na Skrzynię (Box Jump)</div>
+          <div class="card-sets">4 × 5 · Przerwa 2 min</div>
+          <ul class="tips-list">
+            <li class="tip-item"><span class="tip-icon">⚡</span>Skocz miękkimi kolanami — nie ląduj sztywno</li>
+            <li class="tip-item"><span class="tip-icon">⚡</span>Zeskakuj zawsze na ziemię — nie skacz w tył ze skrzyni</li>
+            <li class="tip-item"><span class="tip-icon">⚡</span>Kluczowe dla mocy biegowej i szybkości kroku</li>
           </ul>
         </div>
       </div>
@@ -962,6 +992,22 @@
 <script>
 // ─── DANE ĆWICZEŃ ───────────────────────────────────────────
 const EXERCISES = {
+  boxjump: {
+    title:"Skok na Skrzynię (Box Jump)",
+    sets:"4 × 5 · Przerwa 2 min",
+    yt:'nBJkE_FHZWA', ytCh:'Jeff Nippard',
+    tags:[["Eksplozywność","tag-muscle"],["Nogi","tag-muscle"]],
+    steps:["Stań przed skrzynią w odległości ok. 30-40 cm. Stopy na szerokość bioder.",
+           "Lekki przysiad — biodra cofnij, ramiona do tyłu.",
+           "Eksplozywny wyskok — ramiona do przodu, kolana do góry.",
+           "Ląduj miękko na środku skrzyni — kolana ugięte, nie sztywne.",
+           "Wyprostuj się na skrzyni. Zejdź krokiem w dół — nie skacz w tył!",
+           "Krótka pauza, reset postawy i następne powtórzenie."],
+    errors:["🚫 Lądowanie na prostych nogach — ogromny stres na stawy kolanowe.",
+            "🚫 Skakanie z powrotem ze skrzyni — ryzyko upadku. Zawsze schodź krokiem.",
+            "🚫 Za wysoka skrzynia na start — zacznij od niskiej (40-50 cm)."],
+    note:"Skoki plyometryczne przekładają siłę mięśni na moc — to bezpośrednie przełożenie na szybkość biegu i odbicie."
+  },
   squat: {
     yt: 'nEQQle9-0NA', ytCh: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
@@ -978,7 +1024,7 @@ const EXERCISES = {
     note:"Dla biegaczy: przysiad wzmacnia mięsień pośladkowy wielki i czworogłowy — główne silniki biegu."
   },
   rdl: {
-    yt: 'hCDZSxwrZL0', ytCh: 'Alan Thrall',
+    yt: '80F9FJP8pzg', ytCh: 'Jeff Nippard',
     yt: 'hCDZSxwrZL0', ytChannel: 'Alan Thrall',
     yt: 'hCDZSxwrZL0', ytChannel: 'Alan Thrall',
     title:"Martwy Ciąg Rumuński (RDL)",sets:"3 × 8-10 · Przerwa 90s",tags:[["A","tag-a"],["Dwugłowe","tag-muscle"],["Pośladki","tag-muscle"]],
@@ -991,7 +1037,7 @@ const EXERCISES = {
     errors:["🚫 Zginasz kolana jak w klasycznym deadlifcie — to jest RDL, nie squat.","🚫 Zaokrąglasz kręgosłup na dole — to sygnał że schodzisz za nisko lub ciężar za duży.","🚫 Sztanga oddala się od nóg — powinna prawie ocierać się o uda."]
   },
   lunge: {
-    yt: 'QOVaHwm-Q6U', ytCh: 'Jeff Nippard',
+    yt: 'mJilHWIBWO8', ytCh: 'Jeff Nippard',
     yt: 'QOVaHwm-Q6U', ytChannel: 'Jeff Nippard',
     yt: 'QOVaHwm-Q6U', ytChannel: 'Jeff Nippard',
     title:"Wykroki Chodzące z Hantlami",sets:"3 × 10/nogę · Przerwa 90s",tags:[["A","tag-a"],["Czworogłowe","tag-muscle"],["Stabilizacja","tag-muscle"]],
@@ -1005,7 +1051,7 @@ const EXERCISES = {
     note:"Unilateralny trening (jedna noga) jest kluczowy dla biegaczy — wykrywa i koryguje asymetrie siłowe."
   },
   calves: {
-    yt: 'gwLzBJYoWlQ', ytCh: 'Jeff Nippard',
+    yt: 'BOv5IPDdjuM', ytCh: 'Jeff Nippard',
     yt: 'gwLzBJYoWlQ', ytChannel: 'Jeff Nippard',
     yt: 'gwLzBJYoWlQ', ytChannel: 'Jeff Nippard',
     title:"Wspięcia na Palce",sets:"4 × 15-20 · Przerwa 60s",tags:[["A","tag-a"],["Łydki","tag-muscle"]],
@@ -1018,7 +1064,7 @@ const EXERCISES = {
     note:"Łydki to amortyzator biegu. Zaniedbane = zwiększone ryzyko zapalenia ścięgna Achillesa."
   },
   bench: {
-    yt: '4Y2ZdHCOXok', ytCh: 'Alan Thrall',
+    yt: 'CYjkWSOVy08', ytCh: 'Jeff Nippard',
     yt: '4Y2ZdHCOXok', ytChannel: 'Alan Thrall',
     yt: '4Y2ZdHCOXok', ytChannel: 'Alan Thrall',
     title:"Wyciskanie Sztangi — Ławka Płaska",sets:"4 × 6-8 · Przerwa 2 min",tags:[["A","tag-a"],["Klatka","tag-muscle"],["Triceps","tag-muscle"]],
@@ -1035,7 +1081,7 @@ const EXERCISES = {
     yt: 'eozdVDA78K0', ytCh: 'Jeff Nippard',
     yt: 'eozdVDA78K0', ytChannel: 'Jeff Nippard',
     yt: 'eozdVDA78K0', ytChannel: 'Jeff Nippard',
-    title:"Rozpiętki z Hantlami",sets:"3 × 10-12 · Przerwa 90s",tags:[["A","tag-a"],["Klatka","tag-muscle"]],
+    title:"Wyciskanie Hantlami",sets:"3 × 10-12 · Przerwa 90s",tags:[["A","tag-a"],["Klatka","tag-muscle"]],
     steps:["Połóż się na ławce z hantlami nad klatką — chwyt neutralny (kciuki do góry).",
            "Lekko ugnij łokcie i ZABLOKUJ je w tym kącie na cały ruch.",
            "Opuszczaj hantle na boki — czujesz rozciągnięcie klatki.",
@@ -1385,7 +1431,7 @@ const EXERCISES = {
     errors:["🚫 Ruch bez oddechu — oddech to serce tego ćwiczenia.","🚫 Tylko szyja lub tylko biodra — cały kręgosłup musi się ruszać segmentowo."]
   },
   wgs: {
-    yt: 'ERgpa0jFiCU', ytCh: 'Jeff Nippard',
+    yt: 'PE-UuERblwA', ytCh: 'Tom Merrick',
     yt: 'ERgpa0jFiCU', ytChannel: 'Jeff Nippard',
     yt: 'ERgpa0jFiCU', ytChannel: 'Jeff Nippard',
     title:"World's Greatest Stretch",sets:"2 × 5 na stronę",tags:[["Rozgrzewka","tag-muscle"],["Mobilność","tag-muscle"]],
@@ -1398,7 +1444,7 @@ const EXERCISES = {
     errors:["🚫 Kolano tylnej nogi dotyka podłogi — utrzymuj je uniesione.","🚫 Za szybko — każda pozycja wymaga 2-3 sekund."]
   },
   rowarm: {
-    yt: 'nEQQle9-0NA', ytCh: 'Alan Thrall',
+    yt: '', ytCh: '',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     title:"Rower / Bieżnia — Rozgrzewka",sets:"1 × 8 min",tags:[["Rozgrzewka","tag-muscle"],["Cardio","tag-muscle"]],
