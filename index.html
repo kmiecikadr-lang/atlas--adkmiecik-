@@ -1502,6 +1502,8 @@ function openModal(id) {
   const noteEl = document.getElementById('modal-note');
   if(ex.note){ noteEl.innerHTML=`<span>💡</span><span>${ex.note}</span>`; noteEl.style.display='flex'; }
   else noteEl.style.display='none';
+  const ytEl=document.getElementById('modal-yt');
+  if(ex.yt){ytEl.innerHTML='<a class="yt-btn" href="https://www.youtube.com/watch?v='+ex.yt+'" target="_blank">▶ YouTube · '+(ex.ytCh||'')+'</a>';}else{ytEl.innerHTML='';}
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(e) {
