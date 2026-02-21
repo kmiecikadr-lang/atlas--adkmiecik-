@@ -329,6 +329,17 @@
     transition: background 0.2s;
   }
   .yt-btn:hover { background: rgba(255,0,0,0.22); }
+
+  .yt-btn {
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    padding:10px 18px;background:rgba(255,0,0,0.12);
+    border:1px solid rgba(255,0,0,0.35);border-radius:4px;color:#FF4444;
+    font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;
+    letter-spacing:1px;text-transform:uppercase;text-decoration:none;
+    transition:background 0.2s;cursor:pointer;
+  }
+  .yt-btn:hover{background:rgba(255,0,0,0.25);}
+
 </style>
 </head>
 <body>
@@ -356,7 +367,7 @@
     <div class="section-label">Rozgrzewka</div>
     <div class="exercises-grid">
       <div class="ex-card a-card" onclick="openModal('rowarm')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Spinning_bikes.jpg/640px-Spinning_bikes.jpg" onerror="this.style.display='none'" alt="Rower stacjonarny">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Cardio</span></div>
           <div class="card-title">Rower / Bieżnia — Rozgrzewka</div>
@@ -368,7 +379,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('wgs')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1566241142559-40e1dab266c6?w=640&q=80" onerror="this.style.display='none'" alt="World's Greatest Stretch">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Mobilność</span></div>
           <div class="card-title">World's Greatest Stretch</div>
@@ -384,8 +395,8 @@
     <div class="section-label">Nogi</div>
     <div class="exercises-grid">
       <div class="ex-card a-card" onclick="openModal('squat')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Squats_2.jpg/640px-Squats_2.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Przysiad">
-        <div class="card-img-placeholder" style="display:none">🏋️</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Czworogłowe</span><span class="tag tag-muscle">Pośladki</span></div>
           <div class="card-title">Przysiad ze Sztangą</div>
@@ -399,8 +410,8 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('rdl')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Romanian_Deadlift.jpg/640px-Romanian_Deadlift.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="RDL">
-        <div class="card-img-placeholder" style="display:none">🏋️</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Dwugłowe</span><span class="tag tag-muscle">Pośladki</span></div>
           <div class="card-title">Martwy Ciąg Rumuński (RDL)</div>
@@ -414,7 +425,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('lunge')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Dumbbell_Lunge.jpg/640px-Dumbbell_Lunge.jpg" onerror="this.style.display='none'" alt="Wykroki chodzące">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Czworogłowe</span><span class="tag tag-muscle">Stabilizacja</span></div>
           <div class="card-title">Wykroki Chodzące z Hantlami</div>
@@ -427,7 +438,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('calves')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Calf_raise.jpg/640px-Calf_raise.jpg" onerror="this.style.display='none'" alt="Wspięcia na palce">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Łydki</span></div>
           <div class="card-title">Wspięcia na Palce (Łydki)</div>
@@ -444,8 +455,8 @@
     <div class="section-label">Klatka i Triceps</div>
     <div class="exercises-grid">
       <div class="ex-card a-card" onclick="openModal('bench')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Bench_press_2.jpg/640px-Bench_press_2.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Bench press">
-        <div class="card-img-placeholder" style="display:none">💪</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Klatka</span><span class="tag tag-muscle">Triceps</span></div>
           <div class="card-title">Wyciskanie Sztangi — Ławka Płaska</div>
@@ -459,7 +470,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('flies')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dumbbell_fly.jpg/640px-Dumbbell_fly.jpg" onerror="this.style.display='none'" alt="Rozpiętki">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Klatka</span></div>
           <div class="card-title">Rozpiętki z Hantlami na Ławce</div>
@@ -472,7 +483,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('dips')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Dips_-_CrossFit_Journal.jpg/640px-Dips_-_CrossFit_Journal.jpg" onerror="this.style.display='none'" alt="Dipy">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Triceps</span></div>
           <div class="card-title">Dipy / Triceps Pushdown</div>
@@ -489,8 +500,8 @@
     <div class="section-label">Brzuch (Core)</div>
     <div class="exercises-grid">
       <div class="ex-card a-card" onclick="openModal('plank')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Plank_position.jpg/640px-Plank_position.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Plank">
-        <div class="card-img-placeholder" style="display:none">📏</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Core</span><span class="tag tag-muscle">Stabilizacja</span></div>
           <div class="card-title">Plank + Warianty Boczne</div>
@@ -504,7 +515,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('legrise')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Hanging-Leg-Raise.jpg/640px-Hanging-Leg-Raise.jpg" onerror="this.style.display='none'" alt="Unoszenie nóg w zwisie">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Dolny brzuch</span></div>
           <div class="card-title">Unoszenie Nóg w Zwisie</div>
@@ -517,7 +528,7 @@
         </div>
       </div>
       <div class="ex-card a-card" onclick="openModal('pallof')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=640&q=80" onerror="this.style.display='none'" alt="Pallof Press">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-a">Trening A</span><span class="tag tag-muscle">Anty-rotacja</span></div>
           <div class="card-title">Pallof Press</div>
@@ -537,7 +548,7 @@
     <div class="section-label">Rozgrzewka</div>
     <div class="exercises-grid">
       <div class="ex-card b-card" onclick="openModal('rowing')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Rowing_machine_-_Wikipedia.jpg/640px-Rowing_machine_-_Wikipedia.jpg" onerror="this.style.display='none'" alt="Wioślarki">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Cardio</span></div>
           <div class="card-title">Ergometr / Wioślarki — Rozgrzewka</div>
@@ -553,8 +564,8 @@
     <div class="section-label">Plecy</div>
     <div class="exercises-grid">
       <div class="ex-card b-card" onclick="openModal('deadlift')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Conventional_Deadlift.jpg/640px-Conventional_Deadlift.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Deadlift">
-        <div class="card-img-placeholder" style="display:none">👑</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Plecy</span><span class="tag tag-muscle">Nogi</span><span class="tag tag-muscle">Pośladki</span></div>
           <div class="card-title">Martwy Ciąg Klasyczny 👑</div>
@@ -569,8 +580,8 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('latpulldown')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lat_pull_down.jpg/640px-Lat_pull_down.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Lat Pulldown">
-        <div class="card-img-placeholder" style="display:none">⬇️</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Najszersze</span><span class="tag tag-muscle">Biceps</span></div>
           <div class="card-title">Lat Pulldown — Wyciąg Szerokim Chwytem</div>
@@ -585,7 +596,7 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('row')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Bent_over_row.jpg/640px-Bent_over_row.jpg" onerror="this.style.display='none'" alt="Wiosłowanie sztangą">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Plecy</span></div>
           <div class="card-title">Wiosłowanie Sztangą (Bent-over Row)</div>
@@ -598,7 +609,7 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('facepull')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&q=80" onerror="this.style.display='none'" alt="Face Pull">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Tylne barki</span><span class="tag tag-muscle">Rotatory</span></div>
           <div class="card-title">Face Pull z Linką</div>
@@ -615,7 +626,7 @@
     <div class="section-label">Nogi (uzupełniające)</div>
     <div class="exercises-grid">
       <div class="ex-card b-card" onclick="openModal('bulgarian')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Bulgarian_split_squat.jpg/640px-Bulgarian_split_squat.jpg" onerror="this.style.display='none'" alt="Bułgarski przysiad">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Czworogłowe</span><span class="tag tag-muscle">Pośladki</span></div>
           <div class="card-title">Bułgarski Przysiad z Hantlami</div>
@@ -628,7 +639,7 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('legcurl')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lying_Leg_Curls.jpg/640px-Lying_Leg_Curls.jpg" onerror="this.style.display='none'" alt="Leg Curl">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Dwugłowe uda</span></div>
           <div class="card-title">Leg Curl — Uginanie Nóg Leżąc</div>
@@ -645,7 +656,7 @@
     <div class="section-label">Biceps i Brzuch</div>
     <div class="exercises-grid">
       <div class="ex-card b-card" onclick="openModal('curl')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Barbell_Curl.jpg/640px-Barbell_Curl.jpg" onerror="this.style.display='none'" alt="Uginanie ze sztangą">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Biceps</span></div>
           <div class="card-title">Uginanie Ramion ze Sztangą</div>
@@ -658,7 +669,7 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('hammer')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Hammer_curls_2.jpg/640px-Hammer_curls_2.jpg" onerror="this.style.display='none'" alt="Hammer Curl">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Biceps</span></div>
           <div class="card-title">Hammer Curl z Hantlami</div>
@@ -671,7 +682,7 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('hollow')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=640&q=80" onerror="this.style.display='none'" alt="Hollow Body Hold">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Core</span></div>
           <div class="card-title">Hollow Body Hold</div>
@@ -684,7 +695,7 @@
         </div>
       </div>
       <div class="ex-card b-card" onclick="openModal('russian')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Russian_twist.jpg/640px-Russian_twist.jpg" onerror="this.style.display='none'" alt="Russian Twist">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-b">Trening B</span><span class="tag tag-muscle">Skośne</span><span class="tag tag-muscle">Rotacja</span></div>
           <div class="card-title">Russian Twist z Obciążeniem</div>
@@ -704,7 +715,7 @@
     <div class="section-label">Mobilizacja (10 min)</div>
     <div class="exercises-grid">
       <div class="ex-card c-card" onclick="openModal('hipcircles')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=640&q=80" onerror="this.style.display='none'" alt="Kręgi biodrowe">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Biodra</span></div>
           <div class="card-title">Kręgi Biodrowe</div>
@@ -716,7 +727,7 @@
         </div>
       </div>
       <div class="ex-card c-card" onclick="openModal('catcow')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?w=640&q=80" onerror="this.style.display='none'" alt="Cat-Cow">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Kręgosłup</span></div>
           <div class="card-title">Cat-Cow Flow</div>
@@ -732,7 +743,7 @@
     <div class="section-label">Nogi i Biodra — Priorytet biegowy! (20 min)</div>
     <div class="exercises-grid">
       <div class="ex-card c-card" onclick="openModal('pigeon')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=640&q=80" onerror="this.style.display='none'" alt="Figura 4">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Pośladki</span><span class="tag tag-muscle">Piriformis</span></div>
           <div class="card-title">Figura 4 / Piriformis Stretch 🔑</div>
@@ -746,7 +757,7 @@
         </div>
       </div>
       <div class="ex-card c-card" onclick="openModal('lowlunge')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=640&q=80" onerror="this.style.display='none'" alt="Low Lunge">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Biodrowo-lędźwiowy</span></div>
           <div class="card-title">Low Lunge + Twist 🔑</div>
@@ -759,7 +770,7 @@
         </div>
       </div>
       <div class="ex-card c-card" onclick="openModal('hamstring')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=640&q=80" onerror="this.style.display='none'" alt="Hamstring Stretch">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Dwugłowe uda</span></div>
           <div class="card-title">Hamstring Stretch — Leżąc z Pasem</div>
@@ -771,7 +782,7 @@
         </div>
       </div>
       <div class="ex-card c-card" onclick="openModal('calvesc')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=640&q=80" onerror="this.style.display='none'" alt="Rozciąganie łydek">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Łydki</span><span class="tag tag-muscle">Achilles</span></div>
           <div class="card-title">Rozciąganie Łydek (2 wersje)</div>
@@ -788,7 +799,7 @@
     <div class="section-label">Kręgosłup i Plecy (15 min)</div>
     <div class="exercises-grid">
       <div class="ex-card c-card" onclick="openModal('childpose')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=640&q=80" onerror="this.style.display='none'" alt="Child's Pose">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">L-S kręgosłup</span><span class="tag tag-muscle">Barki</span></div>
           <div class="card-title">Child's Pose — Pozycja Dziecka</div>
@@ -800,7 +811,7 @@
         </div>
       </div>
       <div class="ex-card c-card" onclick="openModal('twist')">
-        <img class="card-img" src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=640&q=80" onerror="this.style.display='none'" alt="Supine Twist">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-c">Trening C</span><span class="tag tag-muscle">Th-spine</span><span class="tag tag-muscle">Biodra</span></div>
           <div class="card-title">Skrętoskłon Leżący (Supine Twist)</div>
@@ -826,8 +837,8 @@
 
     <div class="exercises-grid">
       <div class="ex-card pull-card" onclick="openModal('latpulldown_prog')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Lat_pull_down.jpg/640px-Lat_pull_down.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="Lat Pulldown">
-        <div class="card-img-placeholder" style="display:none">⬇️</div>
+        
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-pull">Główne</span><span class="tag tag-muscle">Najszersze</span><span class="tag tag-muscle">Biceps</span></div>
           <div class="card-title">Lat Pulldown — Technika</div>
@@ -842,7 +853,7 @@
         </div>
       </div>
       <div class="ex-card pull-card" onclick="openModal('negatives')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pull_up_-_1.jpg/640px-Pull_up_-_1.jpg" onerror="this.style.display='none'" alt="Negative Pull-ups">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-pull">Uzupełniające</span><span class="tag tag-muscle">Ekscentryczne</span></div>
           <div class="card-title">Negatives — Zwolnione Opuszczanie</div>
@@ -857,7 +868,7 @@
         </div>
       </div>
       <div class="ex-card pull-card" onclick="openModal('pullup_full')">
-        <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pull_up_-_1.jpg/640px-Pull_up_-_1.jpg" onerror="this.style.display='none'" alt="Podciąganie">
+        
         <div class="card-body">
           <div class="card-tags"><span class="tag tag-pull">Cel</span><span class="tag tag-muscle">Najszersze</span><span class="tag tag-muscle">Biceps</span><span class="tag tag-muscle">Core</span></div>
           <div class="card-title">Podciąganie — Docelowa Technika</div>
@@ -941,6 +952,7 @@
       <div class="modal-section-title" id="errors-title">NAJCZĘSTSZE BŁĘDY</div>
       <ul class="tips-list" id="modal-errors"></ul>
       <div id="modal-note" class="warn-box yellow" style="margin-top:16px; display:none;"></div>
+      <div id="modal-yt" style="margin-top:8px;"></div>
       <div id="modal-yt" style="margin-top:12px; display:none;"></div>
       <div id="modal-yt" style="margin-top:12px; display:none;"></div>
     </div>
@@ -951,6 +963,7 @@
 // ─── DANE ĆWICZEŃ ───────────────────────────────────────────
 const EXERCISES = {
   squat: {
+    yt: 'nEQQle9-0NA', ytCh: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     title:"Przysiad ze Sztangą",sets:"4 × 6-8 · Przerwa 2-3 min",tags:[["A","tag-a"],["Czworogłowe","tag-muscle"],["Pośladki","tag-muscle"]],
@@ -965,6 +978,7 @@ const EXERCISES = {
     note:"Dla biegaczy: przysiad wzmacnia mięsień pośladkowy wielki i czworogłowy — główne silniki biegu."
   },
   rdl: {
+    yt: 'hCDZSxwrZL0', ytCh: 'Alan Thrall',
     yt: 'hCDZSxwrZL0', ytChannel: 'Alan Thrall',
     yt: 'hCDZSxwrZL0', ytChannel: 'Alan Thrall',
     title:"Martwy Ciąg Rumuński (RDL)",sets:"3 × 8-10 · Przerwa 90s",tags:[["A","tag-a"],["Dwugłowe","tag-muscle"],["Pośladki","tag-muscle"]],
@@ -977,6 +991,7 @@ const EXERCISES = {
     errors:["🚫 Zginasz kolana jak w klasycznym deadlifcie — to jest RDL, nie squat.","🚫 Zaokrąglasz kręgosłup na dole — to sygnał że schodzisz za nisko lub ciężar za duży.","🚫 Sztanga oddala się od nóg — powinna prawie ocierać się o uda."]
   },
   lunge: {
+    yt: 'QOVaHwm-Q6U', ytCh: 'Jeff Nippard',
     yt: 'QOVaHwm-Q6U', ytChannel: 'Jeff Nippard',
     yt: 'QOVaHwm-Q6U', ytChannel: 'Jeff Nippard',
     title:"Wykroki Chodzące z Hantlami",sets:"3 × 10/nogę · Przerwa 90s",tags:[["A","tag-a"],["Czworogłowe","tag-muscle"],["Stabilizacja","tag-muscle"]],
@@ -990,6 +1005,7 @@ const EXERCISES = {
     note:"Unilateralny trening (jedna noga) jest kluczowy dla biegaczy — wykrywa i koryguje asymetrie siłowe."
   },
   calves: {
+    yt: 'gwLzBJYoWlQ', ytCh: 'Jeff Nippard',
     yt: 'gwLzBJYoWlQ', ytChannel: 'Jeff Nippard',
     yt: 'gwLzBJYoWlQ', ytChannel: 'Jeff Nippard',
     title:"Wspięcia na Palce",sets:"4 × 15-20 · Przerwa 60s",tags:[["A","tag-a"],["Łydki","tag-muscle"]],
@@ -1002,6 +1018,7 @@ const EXERCISES = {
     note:"Łydki to amortyzator biegu. Zaniedbane = zwiększone ryzyko zapalenia ścięgna Achillesa."
   },
   bench: {
+    yt: '4Y2ZdHCOXok', ytCh: 'Alan Thrall',
     yt: '4Y2ZdHCOXok', ytChannel: 'Alan Thrall',
     yt: '4Y2ZdHCOXok', ytChannel: 'Alan Thrall',
     title:"Wyciskanie Sztangi — Ławka Płaska",sets:"4 × 6-8 · Przerwa 2 min",tags:[["A","tag-a"],["Klatka","tag-muscle"],["Triceps","tag-muscle"]],
@@ -1015,6 +1032,7 @@ const EXERCISES = {
     errors:["🚫 Łokcie 90° = ogromny stres na stożek rotatorów barku.","🚫 Odbijanie sztangi od klatki — ryzyko urazu + żaden efekt treningowy.","🚫 Pośladki unoszą się z ławki — wtedy to już nie jest wyciskanie ławkowe."]
   },
   flies: {
+    yt: 'eozdVDA78K0', ytCh: 'Jeff Nippard',
     yt: 'eozdVDA78K0', ytChannel: 'Jeff Nippard',
     yt: 'eozdVDA78K0', ytChannel: 'Jeff Nippard',
     title:"Rozpiętki z Hantlami",sets:"3 × 10-12 · Przerwa 90s",tags:[["A","tag-a"],["Klatka","tag-muscle"]],
@@ -1027,6 +1045,7 @@ const EXERCISES = {
     errors:["🚫 Zbyt wyprostowane łokcie = stres na staw łokciowy.","🚫 Schodzenie za nisko = ryzyko naderwania klatki. Łokcie max na poziomie ławki."]
   },
   dips: {
+    yt: '2z8JmcrW-As', ytCh: 'Jeff Nippard',
     yt: '2z8JmcrW-As', ytChannel: 'Jeff Nippard',
     yt: '2z8JmcrW-As', ytChannel: 'Jeff Nippard',
     title:"Dipy / Triceps Pushdown",sets:"3 × 8-12 · Przerwa 90s",tags:[["A","tag-a"],["Triceps","tag-muscle"]],
@@ -1039,6 +1058,7 @@ const EXERCISES = {
     errors:["🚫 Dipy: łokcie lecą na boki = stres na barki.","🚫 Pushdown: tułów się pochyla przy robieniu ciężaru — zmniejsz obciążenie."]
   },
   plank: {
+    yt: 'ASdvN_XEl_c', ytCh: 'Jeff Nippard',
     yt: 'ASdvN_XEl_c', ytChannel: 'Jeff Nippard',
     yt: 'ASdvN_XEl_c', ytChannel: 'Jeff Nippard',
     title:"Plank + Warianty Boczne",sets:"3 × 45-60s · Przerwa 45s",tags:[["A","tag-a"],["Core","tag-muscle"],["Stabilizacja","tag-muscle"]],
@@ -1053,6 +1073,7 @@ const EXERCISES = {
     note:"Silny core = lepsza postawa biegowa, mniej bólu kręgosłupa i lepsze przenoszenie mocy z nóg."
   },
   legrise: {
+    yt: 'hdng3lyIe2Y', ytCh: 'Calisthenicmovement',
     yt: 'hdng3lyIe2Y', ytChannel: 'Calisthenicmovement',
     yt: 'hdng3lyIe2Y', ytChannel: 'Calisthenicmovement',
     title:"Unoszenie Nóg w Zwisie",sets:"3 × 10-15 · Przerwa 60s",tags:[["A","tag-a"],["Dolny brzuch","tag-muscle"]],
@@ -1065,6 +1086,7 @@ const EXERCISES = {
     errors:["🚫 Swobodne spadanie nóg w dół = żaden efekt. Kontroluj opuszczanie.","🚫 Kiwanie ciałem = inercja zamiast siły mięśniowej."]
   },
   pallof: {
+    yt: 'AH_QZLm_0-s', ytCh: 'Jeff Nippard',
     yt: 'AH_QZLm_0-s', ytChannel: 'Jeff Nippard',
     yt: 'AH_QZLm_0-s', ytChannel: 'Jeff Nippard',
     title:"Pallof Press",sets:"3 × 10/stronę · Przerwa 60s",tags:[["A","tag-a"],["Anty-rotacja","tag-muscle"],["Core","tag-muscle"]],
@@ -1079,6 +1101,7 @@ const EXERCISES = {
     note:"Pallof press naśladuje stabilizację tułowia podczas biegu — każdy krok to jednostronne obciążenie."
   },
   deadlift: {
+    yt: 'op9kVnSso6Q', ytCh: 'Alan Thrall',
     yt: 'op9kVnSso6Q', ytChannel: 'Alan Thrall',
     yt: 'op9kVnSso6Q', ytChannel: 'Alan Thrall',
     title:"Martwy Ciąg Klasyczny 👑",sets:"4 × 4-6 · Przerwa 3 min",tags:[["B","tag-b"],["Plecy","tag-muscle"],["Nogi","tag-muscle"],["Pośladki","tag-muscle"]],
@@ -1094,6 +1117,7 @@ const EXERCISES = {
     note:"Martwy ciąg jest KRÓLEM ćwiczeń dla biegaczy — wzmacnia cały łańcuch tylny odpowiedzialny za propulsję (odbicie)."
   },
   latpulldown: {
+    yt: 'CAwf7n6Luuc', ytCh: 'Jeff Nippard',
     yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     title:"Lat Pulldown — Wyciąg",sets:"4 × 6-12 · Przerwa 2 min",tags:[["B","tag-b"],["Najszersze","tag-muscle"],["Biceps","tag-muscle"]],
@@ -1108,6 +1132,7 @@ const EXERCISES = {
     note:"Lat pulldown to Twoja bezpośrednia droga do podciągnięć. Gdy ciągniesz 80-85% masy ciała × 8 — czas na drążek!"
   },
   row: {
+    yt: 'G8l_8chR5BE', ytCh: 'Jeff Nippard',
     yt: 'G8l_8chR5BE', ytChannel: 'Jeff Nippard',
     yt: 'G8l_8chR5BE', ytChannel: 'Jeff Nippard',
     title:"Wiosłowanie Sztangą",sets:"3 × 8-10 · Przerwa 2 min",tags:[["B","tag-b"],["Plecy","tag-muscle"]],
@@ -1120,6 +1145,7 @@ const EXERCISES = {
     errors:["🚫 Tułów się prostuje przy ciągnięciu — to kołysanie, nie wiosłowanie.","🚫 Łokcie lecą na boki — ciągnij łokciami do bioder, nie do barków."]
   },
   facepull: {
+    yt: 'rep-qVOkqgk', ytCh: 'Jeff Nippard',
     yt: 'rep-qVOkqgk', ytChannel: 'Jeff Nippard',
     yt: 'rep-qVOkqgk', ytChannel: 'Jeff Nippard',
     title:"Face Pull z Linką",sets:"3 × 12-15 · Przerwa 60s",tags:[["B","tag-b"],["Tylne barki","tag-muscle"],["Rotatory","tag-muscle"]],
@@ -1133,6 +1159,7 @@ const EXERCISES = {
     note:"Face pull = zdrowie barków + otwarta klatka = lepsza postawa biegowa. Niezbędne jeśli siedzisz dużo przy biurku!"
   },
   bulgarian: {
+    yt: '2C-uNgKwPLE', ytCh: 'Jeff Nippard',
     yt: '2C-uNgKwPLE', ytChannel: 'Jeff Nippard',
     yt: '2C-uNgKwPLE', ytChannel: 'Jeff Nippard',
     title:"Bułgarski Przysiad z Hantlami",sets:"3 × 8-10/nogę · Przerwa 90s",tags:[["B","tag-b"],["Czworogłowe","tag-muscle"],["Pośladki","tag-muscle"]],
@@ -1146,6 +1173,7 @@ const EXERCISES = {
     note:"Najlepsze ćwiczenie do wykrywania asymetrii siłowych między nogami — u biegaczy to częsta przyczyna kontuzji."
   },
   legcurl: {
+    yt: 'Orxowest56U', ytCh: 'Jeff Nippard',
     yt: 'Orxowest56U', ytChannel: 'Jeff Nippard',
     yt: 'Orxowest56U', ytChannel: 'Jeff Nippard',
     title:"Leg Curl — Uginanie Nóg",sets:"3 × 10-12 · Przerwa 90s",tags:[["B","tag-b"],["Dwugłowe uda","tag-muscle"]],
@@ -1158,6 +1186,7 @@ const EXERCISES = {
     note:"Wzmocnione dwugłowe uda = główna prewencja urazu ścięgna Achillesa i naciągnięcia podkolanowego u biegaczy."
   },
   curl: {
+    yt: 'ykJmrZ5v0Oo', ytCh: 'Jeff Nippard',
     yt: 'ykJmrZ5v0Oo', ytChannel: 'Jeff Nippard',
     yt: 'ykJmrZ5v0Oo', ytChannel: 'Jeff Nippard',
     title:"Uginanie Ramion ze Sztangą",sets:"3 × 8-10 · Przerwa 90s",tags:[["B","tag-b"],["Biceps","tag-muscle"]],
@@ -1170,6 +1199,7 @@ const EXERCISES = {
     errors:["🚫 Łokcie idą do przodu przy dźwiganiu — to kołysanie, nie bicepsy.","🚫 Kiwanie tułowiem do tyłu — za ciężko lub za ego. Zmniejsz ciężar."]
   },
   hammer: {
+    yt: 'TwD-YGVP4Bk', ytCh: 'Jeff Nippard',
     yt: 'TwD-YGVP4Bk', ytChannel: 'Jeff Nippard',
     yt: 'TwD-YGVP4Bk', ytChannel: 'Jeff Nippard',
     title:"Hammer Curl z Hantlami",sets:"3 × 10-12 · Przerwa 60s",tags:[["B","tag-b"],["Biceps","tag-muscle"]],
@@ -1181,6 +1211,7 @@ const EXERCISES = {
     errors:["🚫 Obracasz nadgarstek w górze — to nie jest hammer curl wtedy.","🚫 Te same błędy co w zwykłym curlu — łokcie i kołysanie."]
   },
   hollow: {
+    yt: 'LlDNef_Zt9Y', ytCh: 'FitnessFAQs',
     yt: 'LlDNef_Zt9Y', ytChannel: 'FitnessFAQs',
     yt: 'LlDNef_Zt9Y', ytChannel: 'FitnessFAQs',
     title:"Hollow Body Hold",sets:"3 × 30-45s · Przerwa 45s",tags:[["B","tag-b"],["Core","tag-muscle"]],
@@ -1194,6 +1225,7 @@ const EXERCISES = {
     note:"Hollow body to fundament siły core dla każdego sportowca. Naśladuje twardość tułowia podczas biegu."
   },
   russian: {
+    yt: 'wkD8rjkodUI', ytCh: 'Jeff Nippard',
     yt: 'wkD8rjkodUI', ytChannel: 'Jeff Nippard',
     yt: 'wkD8rjkodUI', ytChannel: 'Jeff Nippard',
     title:"Russian Twist z Obciążeniem",sets:"3 × 20 (10/stronę) · Przerwa 45s",tags:[["B","tag-b"],["Skośne","tag-muscle"],["Rotacja","tag-muscle"]],
@@ -1205,6 +1237,7 @@ const EXERCISES = {
     errors:["🚫 Tylko ręce się kręcą, tułów stoi — to nie jest rotacja mięśni skośnych.","🚫 Zbyt szybko — każde powtórzenie powinno być kontrolowane."]
   },
   latpulldown_prog: {
+    yt: 'CAwf7n6Luuc', ytCh: 'Jeff Nippard',
     yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     yt: 'CAwf7n6Luuc', ytChannel: 'Jeff Nippard',
     title:"Lat Pulldown — Progresja",sets:"Tydz 1-2: 4×10-12 | Tydz 3-4: 4×6-8 | Tydz 5-6: 5×5",tags:[["Progresja","tag-pull"],["Najszersze","tag-muscle"]],
@@ -1219,6 +1252,7 @@ const EXERCISES = {
     note:"Cel progresji: gdy ciągniesz ~80-85% swojej masy ciała × 8 z czystą techniką → czas wejść na drążek!"
   },
   negatives: {
+    yt: 'lX-eXSXMHUQ', ytCh: 'Calisthenicmovement',
     yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     title:"Negatives — Zwolnione Opuszczanie",sets:"Tydz 1-2: 3×3-5 sek | Tydz 3-4: 3×4-5 sek",tags:[["Progresja","tag-pull"],["Ekscentryczne","tag-muscle"]],
@@ -1232,6 +1266,7 @@ const EXERCISES = {
     note:"Faza ekscentryczna jest 20-40% silniejsza od koncentrycznej. Negatives to najszybszy sposób na siłę do podciągania."
   },
   pullup_full: {
+    yt: 'lX-eXSXMHUQ', ytCh: 'Calisthenicmovement',
     yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     yt: 'lX-eXSXMHUQ', ytChannel: 'Calisthenicmovement',
     title:"Podciąganie — Docelowa Technika",sets:"Od tygodnia 5: 3-4 × MAX · Przerwa 2 min",tags:[["Cel","tag-pull"],["Najszersze","tag-muscle"],["Biceps","tag-muscle"]],
@@ -1246,6 +1281,7 @@ const EXERCISES = {
     note:"8-10 czystych podciągnięć = cel po 8 tygodniach progresji. Zapisuj wyniki co tydzień w Excelu!"
   },
   pigeon: {
+    yt: '1GFHDd-OWC4', ytCh: 'Tom Merrick',
     yt: '1GFHDd-OWC4', ytChannel: 'Tom Merrick',
     yt: '1GFHDd-OWC4', ytChannel: 'Tom Merrick',
     title:"Figura 4 / Piriformis Stretch",sets:"60s × obie strony",tags:[["C","tag-c"],["Pośladki","tag-muscle"],["Piriformis","tag-muscle"]],
@@ -1259,6 +1295,7 @@ const EXERCISES = {
     note:"Piriformis to głęboki mięsień pośladkowy. Napięty = ból w okolicy siodła i dolnego odcinka. Biegacze go bardzo często napinają."
   },
   lowlunge: {
+    yt: 'UGEpQ1vEq-Y', ytCh: 'Tom Merrick',
     yt: 'UGEpQ1vEq-Y', ytChannel: 'Tom Merrick',
     yt: 'UGEpQ1vEq-Y', ytChannel: 'Tom Merrick',
     title:"Low Lunge + Twist",sets:"45s × obie strony",tags:[["C","tag-c"],["Biodrowo-lędźwiowy","tag-muscle"]],
@@ -1272,6 +1309,7 @@ const EXERCISES = {
     note:"Biodrowo-lędźwiowy to 'mięsień biegacza'. Skrócony od siedzenia = słabszy krok, ból kręgosłupa. Rób to codziennie!"
   },
   hamstring: {
+    yt: 'mMQVFRrEDkQ', ytCh: 'Tom Merrick',
     yt: 'mMQVFRrEDkQ', ytChannel: 'Tom Merrick',
     yt: 'mMQVFRrEDkQ', ytChannel: 'Tom Merrick',
     title:"Hamstring Stretch — Leżąc",sets:"60s × obie strony",tags:[["C","tag-c"],["Dwugłowe uda","tag-muscle"]],
@@ -1284,6 +1322,7 @@ const EXERCISES = {
     errors:["🚫 Unosisz drugą nogę z podłogi — przyciśnij ją.","🚫 Sprężynowanie zamiast statycznego hold — tu nie chodzi o ruch."]
   },
   calvesc: {
+    yt: '7F8swlMdkqY', ytCh: 'Tom Merrick',
     yt: '7F8swlMdkqY', ytChannel: 'Tom Merrick',
     yt: '7F8swlMdkqY', ytChannel: 'Tom Merrick',
     title:"Rozciąganie Łydek",sets:"45s × 2 wersje × obie strony",tags:[["C","tag-c"],["Łydki","tag-muscle"],["Achilles","tag-muscle"]],
@@ -1297,6 +1336,7 @@ const EXERCISES = {
     note:"Ścięgno Achillesa absorbuje 6-8× masę ciała przy każdym kroku biegu. Dbaj o nie!"
   },
   childpose: {
+    yt: 'qUtFVrMHqiA', ytCh: 'Tom Merrick',
     yt: 'qUtFVrMHqiA', ytChannel: 'Tom Merrick',
     yt: 'qUtFVrMHqiA', ytChannel: 'Tom Merrick',
     title:"Child's Pose",sets:"90 sekund",tags:[["C","tag-c"],["Kręgosłup","tag-muscle"],["Barki","tag-muscle"]],
@@ -1308,6 +1348,7 @@ const EXERCISES = {
     errors:["🚫 Napinasz się zamiast odpuszczać — to pozycja odpoczynku.","🚫 Zbyt krótko — mniej niż 45 sekund nie przynosi efektu."]
   },
   twist: {
+    yt: 'e77d4Mr2Fso', ytCh: 'Tom Merrick',
     yt: 'e77d4Mr2Fso', ytChannel: 'Tom Merrick',
     yt: 'e77d4Mr2Fso', ytChannel: 'Tom Merrick',
     title:"Skrętoskłon Leżący (Supine Twist)",sets:"45s × obie strony",tags:[["C","tag-c"],["Kręgosłup","tag-muscle"],["IT band","tag-muscle"]],
@@ -1320,6 +1361,7 @@ const EXERCISES = {
     errors:["🚫 Bark unosi się z podłogi — to znaczy że kręgosłup ma mało mobilności. Zaakceptuj mniejszy zakres.","🚫 Za szybka zmiana strony — daj mięśniom czas na rozluźnienie."]
   },
   hipcircles: {
+    yt: 'eLwp0WiwKgI', ytCh: 'Tom Merrick',
     yt: 'eLwp0WiwKgI', ytChannel: 'Tom Merrick',
     yt: 'eLwp0WiwKgI', ytChannel: 'Tom Merrick',
     title:"Kręgi Biodrowe",sets:"60s · Obie strony",tags:[["C","tag-c"],["Biodra","tag-muscle"]],
@@ -1331,6 +1373,7 @@ const EXERCISES = {
     errors:["🚫 Za szybko — tu chodzi o mobilizację, nie cardio.","🚫 Za małe koła — staraj się o max zakres ruchu."]
   },
   catcow: {
+    yt: 'kqnua4rHVVA', ytCh: 'Tom Merrick',
     yt: 'kqnua4rHVVA', ytChannel: 'Tom Merrick',
     yt: 'kqnua4rHVVA', ytChannel: 'Tom Merrick',
     title:"Cat-Cow Flow",sets:"60 sekund z oddechem",tags:[["C","tag-c"],["Kręgosłup","tag-muscle"]],
@@ -1342,6 +1385,7 @@ const EXERCISES = {
     errors:["🚫 Ruch bez oddechu — oddech to serce tego ćwiczenia.","🚫 Tylko szyja lub tylko biodra — cały kręgosłup musi się ruszać segmentowo."]
   },
   wgs: {
+    yt: 'ERgpa0jFiCU', ytCh: 'Jeff Nippard',
     yt: 'ERgpa0jFiCU', ytChannel: 'Jeff Nippard',
     yt: 'ERgpa0jFiCU', ytChannel: 'Jeff Nippard',
     title:"World's Greatest Stretch",sets:"2 × 5 na stronę",tags:[["Rozgrzewka","tag-muscle"],["Mobilność","tag-muscle"]],
@@ -1354,6 +1398,7 @@ const EXERCISES = {
     errors:["🚫 Kolano tylnej nogi dotyka podłogi — utrzymuj je uniesione.","🚫 Za szybko — każda pozycja wymaga 2-3 sekund."]
   },
   rowarm: {
+    yt: 'nEQQle9-0NA', ytCh: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     yt: 'nEQQle9-0NA', ytChannel: 'Alan Thrall',
     title:"Rower / Bieżnia — Rozgrzewka",sets:"1 × 8 min",tags:[["Rozgrzewka","tag-muscle"],["Cardio","tag-muscle"]],
@@ -1365,6 +1410,7 @@ const EXERCISES = {
     errors:["🚫 Za intensywnie na start — rozgrzewka ma przygotować, nie zmęczyć.","🚫 Pomijanie rozgrzewki — to najczęstsze źródło kontuzji!"]
   },
   rowing: {
+    yt: 'oBE_kKM3Uqo', ytCh: 'Concept2',
     yt: 'oBE_kKM3Uqo', ytChannel: 'Concept2',
     yt: 'oBE_kKM3Uqo', ytChannel: 'Concept2',
     title:"Ergometr / Wioślarki — Rozgrzewka",sets:"1 × 8 min",tags:[["Rozgrzewka","tag-muscle"],["Cardio","tag-muscle"]],
